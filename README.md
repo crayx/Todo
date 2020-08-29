@@ -23,7 +23,7 @@
 
 ##### Path-To-Repository is the place where we have cloned the repository
 
-### Install node_modules in todo-backend(assuming you are in Todo-Assignment directory)
+### Install node_modules in todo-backend(assuming you are in Todo directory)
 
 ` $ cd todo-backend `<br/>
 ` $ npm i `
@@ -34,7 +34,7 @@
 
 ### open new terminal
 
-### Install node_modules in todo-frontend(assuming you are in Todo-Assignment directory)
+### Install node_modules in todo-frontend(assuming you are in Todo directory)
 
 ` $ cd todo-frontend `<br/>
 ` $ npm i `

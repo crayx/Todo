@@ -1,0 +1,87 @@
+.task {
+  display: flex;
+  width: 100%;
+  min-height: 100px;
+  height: auto;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  background-color: #565660;
+}
+
+.task:hover {
+  box-shadow: 0 20px 25px -5px rgba(255, 255, 255, 0.1),
+    0 10px 10px -5px rgba(255, 255, 255, 0.04);
+  cursor: pointer;
+}
+
+.content-task {
+  padding: 24px;
+  width: 100%;
+}
+
+.title {
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 4px;
+  font-family: "Alata", sans-serif;
+}
+
+.title-complete {
+  font-size: 24px;
+  color: #808080;
+  margin-bottom: 4px;
+  font-family: "Alata", sans-serif;
+  text-decoration: line-through;
+}
+.input-edit {
+  width: 100%;
+  margin-right: 4px;
+  padding: 16px;
+  border: 0;
+  border-radius: 4px;
+  font-size: 18px;
+  background-color: #eeeeee;
+  color: #565660;
+}
+.container-edit {
+  display: flex;
+  align-items: center;
+}
+
+.date {
+  font-size: 14px;
+  color: #808080;
+}
+
+.status {
+  height: 75px;
+  width: 4px;
+  margin-top: 10px;
+}
+
+.actions {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-right: 24px;
+}
+.actions:last-of-type {
+  margin-left: auto;
+}
+
+.action {
+  color: #808080;
+}
+.action:hover {
+  color: white;
+}
+.red {
+  background-color: #c53c0b;
+}
+.yellow {
+  background-color: #f5aa41;
+}
+.blue {
+  background-color: #0020fc;
+}

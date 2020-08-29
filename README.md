@@ -30,7 +30,7 @@
 
 ### To start the server for backend
 
-` $ nodemon index.js `
+` $ node index.js `
 
 ### open new terminal
 

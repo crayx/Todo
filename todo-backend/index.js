@@ -14,7 +14,7 @@ function success(res, payload) {
 
 app.get("/todos", async (req, res, next) => {
   try {
-    const todos = await db.Todo.find({}).sort({ date: 1 });
+    const todos = await db.Todo.find({}).sort({ completed: 1, date: 1 });
     return success(res, todos);
   } catch (err) {
     next({ status: 400, message: "Failed to get todos" });

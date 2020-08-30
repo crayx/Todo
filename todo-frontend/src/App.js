@@ -13,7 +13,6 @@ const App = () => {
   const getTodos = () => {
     API.getAllTodos().then((res) => {
       setTodos(res);
-      console.log(res);
     });
   };
 
@@ -54,8 +53,8 @@ const App = () => {
                 onClick={(e) => {
                   setLoading(true);
                   API.createTodo(task, date)
-                    .then((res) => {
-                      setTodos([...todos, res]);
+                    .then(() => {
+                      getTodos();
                       setLoading(false);
                     })
                     .catch((err) => {

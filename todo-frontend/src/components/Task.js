@@ -31,9 +31,10 @@ const Task = ({
   const dateTense = giveTense(date);
   return (
     <div className="task">
-      {dateTense === 1 && <div className="status red"></div>}
-      {dateTense === 2 && <div className="status blue"></div>}
-      {dateTense === 3 && <div className="status yellow"></div>}
+      {dateTense === 1 && !completed && <div className="status red"></div>}
+      {dateTense === 2 && !completed && <div className="status blue"></div>}
+      {dateTense === 3 && !completed && <div className="status yellow"></div>}
+      {completed && <div className="status grey"></div>}
       <div className="content-task">
         {!edit && (
           <div className={completed ? "title-complete" : "title"}>{task}</div>
@@ -61,7 +62,15 @@ const Task = ({
           </div>
         )}
         <div className="date">
-          {date ? new Date(Date.parse(date)).toDateString() : ""}
+          {dateTense === 1
+            ? date
+              ? `Deadline was on ${new Date(Date.parse(date)).toDateString()}`
+              : "No deadline mentioned"
+            : ""}
+          {dateTense === 2 ? `Complete it today` : ""}
+          {dateTense === 3
+            ? `Complete it by ${new Date(Date.parse(date)).toDateString()}`
+            : ""}
         </div>
       </div>
       <div className="actions">

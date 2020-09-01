@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Task.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -29,6 +29,10 @@ const Task = ({
   const [updatedTask, setUpdatedTask] = useState(task);
   const [edit, setEdit] = useState(false);
   const dateTense = giveTense(date);
+  useEffect(() => {
+    setUpdatedTask(task);
+  }, [task]);
+
   return (
     <div className="task">
       {dateTense === 1 && !completed && <div className="status red"></div>}
